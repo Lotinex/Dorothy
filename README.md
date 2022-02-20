@@ -2,6 +2,13 @@
 > Road sign sentence maker   
 > 도로명 표지판으로 말해요
 > 
+
+## 설치
+
+```
+npm install
+```
+
 ## 사용법
 
 작동을 테스트하려면
