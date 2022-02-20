@@ -30,6 +30,10 @@ class Word {
     }
     loadTexture(): Promise<void> {
         return new Promise((rs) => {
+            if(!Fs.existsSync(this.textureSrc)) {
+                console.log(`Word image ${this.content} required but not found.`)
+                process.exit(0)
+            }
             Canvas.loadImage(Fs.readFileSync(this.textureSrc)).then(img => {
                 this.texture = img;
                 this.width = this.width || img.width;
